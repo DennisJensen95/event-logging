@@ -21,3 +21,7 @@ jobs:
         run: earthly +build-cul-linux-x86-64
       - name: Run tests
         run: earthly +unit-test-golang
+      - uses: actions/upload-artifact@v3
+        with:
+          name: cul
+          path: ./bin/cul

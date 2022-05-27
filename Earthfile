@@ -11,7 +11,7 @@ golang-files-env:
 build-cul-linux-x86-64:
     FROM +golang-files-env
     RUN go build -o bin/cul ./cmd/computer-utilization-logging
-    SAVE ARTIFACT ./bin/cul ./bin/cul
+    SAVE ARTIFACT ./bin/cul AS LOCAL ./bin/cul
 
 unit-test-golang:
     FROM +golang-files-env
