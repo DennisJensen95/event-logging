@@ -21,7 +21,7 @@ unit-test-golang:
 frontend-files-env:
     FROM node:16-alpine
     WORKDIR /app
-    COPY ./event-logging-frontend .
+    COPY ./frontend .
 
 unit-test-frontend:
     FROM +frontend-files-env
